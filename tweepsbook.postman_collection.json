@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "9fe4dfeb-7407-439c-8324-50aec0296ecb",
+		"name": "tweepsbook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12430852"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}",
+							"host": [
+								"{{host}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"meh\",\r\n    \"email\":\"bleh@test.com\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}api/users/signup",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\":\"bleh@test.com\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}api/users/login",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDgzNmRlNzg1NTlkZjg0YmU5N2I3NyIsIm5hbWUiOiJtZWgiLCJlbWFpbCI6ImJsZWhAdGVzdC5jb20iLCJpYXQiOjE2NjU2NzcwNDJ9.kyg1ueMq1Am_VWH9InU7u5d1-1K_XfKF8pZDGPaXi0w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}api/users/profile/634836de78559df84be97b77",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"users",
+								"profile",
+								"634836de78559df84be97b77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDgzNmRlNzg1NTlkZjg0YmU5N2I3NyIsIm5hbWUiOiJtZWgiLCJlbWFpbCI6ImJsZWhAdGVzdC5jb20iLCJpYXQiOjE2NjU2NzcwNDJ9.kyg1ueMq1Am_VWH9InU7u5d1-1K_XfKF8pZDGPaXi0w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bleh@test.com\",\r\n    \"name\": \"bleh\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}api/users/profile/634836de78559df84be97b77",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"users",
+								"profile",
+								"634836de78559df84be97b77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDgzMjQ2ZDVjMTJiOTgxYzgwNjc0ZiIsIm5hbWUiOiJheXVzaCIsImVtYWlsIjoiYXl1c2hAdGVzdC5jb20iLCJpYXQiOjE2NjU2NzcxNjR9.NggKQsFi7QGsEa-Hfne2KhRqLNWXXMjOrysjyVh16tE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}api/users/delete/63483246d5c12b981c80674f",
+							"host": [
+								"{{host}}api"
+							],
+							"path": [
+								"users",
+								"delete",
+								"63483246d5c12b981c80674f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

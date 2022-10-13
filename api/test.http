@@ -1,0 +1,13 @@
+### GET default route
+GET http://localhost:3000/ HTTP/1.1
+
+### POST create user
+
+POST http://localhost:3000/api/users/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"lucifer",
+    "email":"lucifer@test.com",
+    "password":"password"
+}
